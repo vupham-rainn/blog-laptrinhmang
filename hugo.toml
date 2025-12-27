@@ -1,4 +1,6 @@
 baseURL = "https://vupham-rainn.github.io/blog-laptrinhmang/"
+publishDir = "docs"
+
 languageCode = "vi"
 title = "Blog Lập Trình Mạng"
 theme = "PaperMod"
