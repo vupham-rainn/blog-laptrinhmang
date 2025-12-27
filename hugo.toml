@@ -1,0 +1,41 @@
+baseURL = "/"
+languageCode = "vi"
+title = "Blog Lập Trình Mạng"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 9
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+  series   = "series"
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  showtoc = true
+
+[params.homeInfoParams]
+  Title = "Xin chào 👋"
+  Content = "Đây là blog cá nhân chia sẻ kiến thức lập trình mạng, Java & JavaScript."
+
+[menu]
+  [[menu.main]]
+  name = "Home"
+  url  = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "Blog"
+  url  = "/posts/"
+  weight = 2
+
+  [[menu.main]]
+  name = "Profile"
+  url  = "/profile/"
+  weight = 3
