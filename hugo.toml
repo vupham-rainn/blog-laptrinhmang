@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://vupham-rainn.github.io/blog-laptrinhmang/"
 languageCode = "vi"
 title = "Blog Lập Trình Mạng"
 theme = "PaperMod"
