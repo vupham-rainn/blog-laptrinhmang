@@ -22,6 +22,9 @@ theme = "PaperMod"
   ShowCodeCopyButtons = true
   showtoc = true
 
+  [params.assets]
+    disableFingerprinting = true
+
 [params.homeInfoParams]
   Title = "Xin chào 👋"
   Content = "Đây là blog cá nhân chia sẻ kiến thức lập trình mạng, Java & JavaScript."
