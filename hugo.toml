@@ -45,8 +45,8 @@ theme = "PaperMod"
   url  = "/profile/"
   weight = 3
 
-  [[menu.main]]
-  name = "Chứng chỉ"
-  url  = "/tags/chung-chi/"
-  weight = 4
+ [[menu.main]]
+name = "Chứng chỉ"
+url  = "/chung-chi/"
+weight = 4
 
