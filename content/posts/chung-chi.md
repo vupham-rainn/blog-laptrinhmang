@@ -2,7 +2,8 @@
 title: "Chứng Chỉ Hoàn Thành Khóa Học"
 date: 2025-12-30T10:00:00+07:00
 draft: false
-tags: ["chứng chỉ", "Cisco", "Networking", "JavaScript"]
+tags: ["chung-chi"]
+
 categories: ["Hành trình học tập"]
 ---
 
