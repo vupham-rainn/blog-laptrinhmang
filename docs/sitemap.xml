@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog-laptrinhmang/</loc>
+    <loc>http://localhost:51669/blog-laptrinhmang/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog-laptrinhmang/categories/</loc>
+    <loc>http://localhost:51669/blog-laptrinhmang/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog-laptrinhmang/profile/</loc>
+    <loc>http://localhost:51669/blog-laptrinhmang/profile/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog-laptrinhmang/series/</loc>
+    <loc>http://localhost:51669/blog-laptrinhmang/series/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog-laptrinhmang/tags/</loc>
+    <loc>http://localhost:51669/blog-laptrinhmang/tags/</loc>
   </url>
 </urlset>
