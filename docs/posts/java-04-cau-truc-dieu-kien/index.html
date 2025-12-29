@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>404 Page not found | Blog Lập Trình Mạng</title>
+<title>Java 04 Cau Truc Dieu Kien | Blog Lập Trình Mạng</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="Java 04 Cau Truc Dieu Kien - Blog Lập Trình Mạng">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:57219/blog-laptrinhmang/404.html">
+<link rel="canonical" href="http://localhost:57219/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/">
 <link crossorigin="anonymous" href="/blog-laptrinhmang/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:57219/blog-laptrinhmang/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:57219/blog-laptrinhmang/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="http://localhost:57219/blog-laptrinhmang/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:57219/blog-laptrinhmang/404.html">
+<link rel="alternate" hreflang="en" href="http://localhost:57219/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,7 +72,7 @@
 
 </script>
 </head>
-<body class="list" id="top">
+<body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
@@ -125,7 +125,43 @@
     </nav>
 </header>
 <main class="main">
-<div class="not-found">404</div>
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:57219/blog-laptrinhmang/">Trang chủ</a>&nbsp;»&nbsp;<a href="http://localhost:57219/blog-laptrinhmang/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Java 04 Cau Truc Dieu Kien
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2025-12-27 21:28:56 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span>
+
+</div>
+  </header> 
+
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:57219/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/">
+    <span class="title">« Trang trước</span>
+    <br>
+    <span>Java 05 Vong Lap Trong Java</span>
+  </a>
+  <a class="next" href="http://localhost:57219/blog-laptrinhmang/posts/java-03-toan-tu-va-bieu-thuc/">
+    <span class="title">Trang tiếp theo »</span>
+    <br>
+    <span>Java 03 Toan Tu Va Bieu Thuc</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
     </main>
     
 <footer class="footer">
@@ -202,6 +238,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'Sao chép';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'Đã sao chép!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'Sao chép';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

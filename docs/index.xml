@@ -2,17 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog Lập Trình Mạng</title>
-    <link>https://vupham-rainn.github.io/blog-laptrinhmang/</link>
+    <link>http://localhost:57219/blog-laptrinhmang/</link>
     <description>Recent content on Blog Lập Trình Mạng</description>
     <generator>Hugo -- 0.153.3</generator>
     <language>vi</language>
-    <atom:link href="https://vupham-rainn.github.io/blog-laptrinhmang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Dec 2025 21:29:23 +0700</lastBuildDate>
+    <atom:link href="http://localhost:57219/blog-laptrinhmang/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Chứng Chỉ &amp; Thành Tựu</title>
-      <link>https://vupham-rainn.github.io/blog-laptrinhmang/chung-chi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://vupham-rainn.github.io/blog-laptrinhmang/chung-chi/</guid>
-      <description>Tổng hợp các chứng chỉ mình đã đạt được</description>
+      <title>Java 09 Xu Ly Ngoai Le</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-09-xu-ly-ngoai-le/</link>
+      <pubDate>Sat, 27 Dec 2025 21:29:23 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-09-xu-ly-ngoai-le/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 08 Ke Thua Va Da Hinh</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-08-ke-thua-va-da-hinh/</link>
+      <pubDate>Sat, 27 Dec 2025 21:29:18 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-08-ke-thua-va-da-hinh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 07 Lop Va Doi Tuong</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/</link>
+      <pubDate>Sat, 27 Dec 2025 21:29:13 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 06 Mang Array</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-06-mang-array/</link>
+      <pubDate>Sat, 27 Dec 2025 21:29:08 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-06-mang-array/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 05 Vong Lap Trong Java</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/</link>
+      <pubDate>Sat, 27 Dec 2025 21:29:03 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 04 Cau Truc Dieu Kien</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/</link>
+      <pubDate>Sat, 27 Dec 2025 21:28:56 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 03 Toan Tu Va Bieu Thuc</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-03-toan-tu-va-bieu-thuc/</link>
+      <pubDate>Sat, 27 Dec 2025 21:28:50 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-03-toan-tu-va-bieu-thuc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 02 Bien Kieu Du Lieu</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/</link>
+      <pubDate>Sat, 27 Dec 2025 21:28:41 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java 01 Gioi Thieu Java</title>
+      <link>http://localhost:57219/blog-laptrinhmang/posts/java-01-gioi-thieu-java/</link>
+      <pubDate>Sat, 27 Dec 2025 21:28:31 +0700</pubDate>
+      <guid>http://localhost:57219/blog-laptrinhmang/posts/java-01-gioi-thieu-java/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

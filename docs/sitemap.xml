@@ -2,16 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vupham-rainn.github.io/blog-laptrinhmang/</loc>
+    <loc>http://localhost:57219/blog-laptrinhmang/</loc>
+    <lastmod>2025-12-27T21:29:23+07:00</lastmod>
   </url><url>
-    <loc>https://vupham-rainn.github.io/blog-laptrinhmang/categories/</loc>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-09-xu-ly-ngoai-le/</loc>
+    <lastmod>2025-12-27T21:29:23+07:00</lastmod>
   </url><url>
-    <loc>https://vupham-rainn.github.io/blog-laptrinhmang/chung-chi/</loc>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/</loc>
+    <lastmod>2025-12-27T21:29:23+07:00</lastmod>
   </url><url>
-    <loc>https://vupham-rainn.github.io/blog-laptrinhmang/profile/</loc>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-08-ke-thua-va-da-hinh/</loc>
+    <lastmod>2025-12-27T21:29:18+07:00</lastmod>
   </url><url>
-    <loc>https://vupham-rainn.github.io/blog-laptrinhmang/series/</loc>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/</loc>
+    <lastmod>2025-12-27T21:29:13+07:00</lastmod>
   </url><url>
-    <loc>https://vupham-rainn.github.io/blog-laptrinhmang/tags/</loc>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-06-mang-array/</loc>
+    <lastmod>2025-12-27T21:29:08+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/</loc>
+    <lastmod>2025-12-27T21:29:03+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/</loc>
+    <lastmod>2025-12-27T21:28:56+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-03-toan-tu-va-bieu-thuc/</loc>
+    <lastmod>2025-12-27T21:28:50+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/</loc>
+    <lastmod>2025-12-27T21:28:41+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/posts/java-01-gioi-thieu-java/</loc>
+    <lastmod>2025-12-27T21:28:31+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/categories/</loc>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/profile/</loc>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/series/</loc>
+  </url><url>
+    <loc>http://localhost:57219/blog-laptrinhmang/tags/</loc>
   </url>
 </urlset>
