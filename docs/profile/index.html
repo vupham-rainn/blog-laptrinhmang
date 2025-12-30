@@ -8,8 +8,9 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Giới thiệu bản thân | Blog Lập Trình Mạng</title>
 
-  <meta name="keywords" content="">
-  <meta name="description" content="Giới thiệu bản thân, hành trình học lập trình mạng và Java, mục tiêu cá nhân và thông tin liên hệ.">
+  <meta name="keywords" content="profile, lập trình mạng, Java, backend, tự học lập trình">
+  <meta name="description"
+        content="Giới thiệu bản thân, hành trình học lập trình mạng và Java, mục tiêu trở thành Java Backend Engineer và thông tin liên hệ.">
   <meta name="author" content="Phạm Quang Hoàng Vũ">
 
   <!-- CANONICAL -->
@@ -29,7 +30,8 @@
   <meta name="theme-color" content="#2e2e33">
   <meta name="msapplication-TileColor" content="#2e2e33">
 
-  <link rel="alternate" type="application/rss+xml" href="https://vupham-rainn.github.io/blog-laptrinhmang/profile/index.xml" title="rss">
+  <link rel="alternate" type="application/rss+xml"
+        href="https://vupham-rainn.github.io/blog-laptrinhmang/profile/index.xml" title="rss">
   <link rel="alternate" hreflang="en" href="https://vupham-rainn.github.io/blog-laptrinhmang/profile/">
 
   <noscript>
@@ -71,7 +73,7 @@
     </style>
   </noscript>
 
-  <!-- STYLE NHỎ CHO TRANG PROFILE -->
+  <!-- STYLE RIÊNG CHO TRANG PROFILE -->
   <style>
     .profile-hero {
       display: flex;
@@ -108,6 +110,74 @@
       color: var(--secondary);
       font-size: 0.98rem;
     }
+
+    .profile-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+
+    .profile-main {
+      flex: 2;
+      min-width: 260px;
+    }
+
+    .profile-side {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .profile-card {
+      background: var(--entry);
+      border-radius: 0.75rem;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, .16);
+      font-size: 0.95rem;
+    }
+
+    .profile-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .profile-pill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.4rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .profile-pill-list li {
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: var(--tertiary);
+      color: var(--primary);
+      font-size: 0.8rem;
+    }
+
+    .profile-timeline {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .profile-timeline li {
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-timeline strong {
+      display: inline-block;
+      min-width: 95px;
+    }
+
+    .profile-section-title {
+      margin-top: 0;
+    }
   </style>
 
   <script>
@@ -128,17 +198,17 @@
     <nav class="nav">
       <div class="logo">
         <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" accesskey="h"
-          title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
+           title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
         <div class="logo-switches">
           <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
             <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
             <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
               <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -187,7 +257,7 @@
       <div class="profile-hero-name">Phạm Quang Hoàng Vũ</div>
       <p class="profile-hero-tagline">
         Sinh viên yêu thích lập trình mạng &amp; Java Backend. Blog này là nơi mình lưu lại hành trình học,
-        chia sẻ kiến thức và các ghi chú kỹ thuật.
+        chia sẻ kiến thức và những gì mình áp dụng được vào thực tế.
       </p>
     </section>
 
@@ -198,63 +268,139 @@
       <h1>Giới thiệu bản thân</h1>
     </header>
 
-    <div class="post-content">
-      <h1>👋 Xin chào, mình là <strong>Phạm Quang Hoàng Vũ</strong></h1>
-      <p>
-        🎓 Sinh viên ngành <strong>Công nghệ thông tin</strong><br>
-        💻 Quan tâm đến:
-        <strong>Java · JavaScript · Lập trình Web · Lập trình mạng</strong>
-      </p>
-      <hr>
-      <h2>🌱 Hành trình học tập</h2>
-      <p>
-        Mình bắt đầu làm quen với lập trình từ khi học các môn <strong>Java</strong> và
-        <strong>JavaScript</strong>. Qua những bài tập, mini project và các tài liệu trên mạng,
-        mình dần nhận ra mình đặc biệt thích:
-      </p>
-      <p>
-        ✔ Phân tích – giải quyết vấn đề<br>
-        ✔ Xây dựng các ứng dụng có thể dùng được trong thực tế<br>
-        ✔ Ghi chép &amp; chia sẻ kiến thức để người khác dễ học hơn
-      </p>
-      <p>Blog này được mình tạo ra để:</p>
-      <p>
-        👉 Ghi lại kiến thức đã học<br>
-        👉 Chia sẻ kinh nghiệm lập trình bằng tiếng Việt<br>
-        👉 Lưu giữ hành trình phát triển bản thân trong lĩnh vực lập trình mạng &amp; backend
-      </p>
-      <hr>
-      <h2>🛠 Công nghệ mình đang dùng</h2>
-      <ul>
-        <li><strong>Java</strong> (OOP, bài tập console, mini-projects)</li>
-        <li><strong>JavaScript</strong> (DOM, ES6, async,…)</li>
-        <li><strong>HTML / CSS</strong> để xây UI cơ bản</li>
-        <li><strong>Hugo + GitHub Pages</strong> để xây dựng và triển khai blog này</li>
-      </ul>
-      <hr>
-      <h2>🎯 Mục tiêu cá nhân</h2>
-      <p>
-        📌 Nắm vững nền tảng Java &amp; JavaScript<br>
-        📌 Hoàn thành các dự án web nhỏ phục vụ học tập &amp; portfolio<br>
-        📌 Rèn luyện tư duy lập trình &amp; kỹ năng tự học<br>
-        📌 Chia sẻ kiến thức lập trình bằng tiếng Việt cho người mới bắt đầu
-      </p>
-      <hr>
-      <h2>📫 Liên hệ với mình</h2>
-      <p>
-        📧 Email: <strong><a href="mailto:hoangvuka2004@gmail.com">hoangvuka2004@gmail.com</a></strong><br>
-        🌐 GitHub: <strong><a href="https://github.com/vupham-rainn">https://github.com/vupham-rainn</a></strong>
-      </p>
-      <blockquote>
-        <p>💬 Nếu bạn cũng đang học lập trình, rất vui nếu chúng ta có thể kết nối và học hỏi lẫn nhau!</p>
-      </blockquote>
-      <hr>
-      <h3>✨ Cảm ơn bạn đã ghé thăm blog của mình!</h3>
-    </div>
+    <section class="profile-layout">
+      <!-- CỘT TRÁI: GIỚI THIỆU CHI TIẾT -->
+      <div class="profile-main">
+        <div class="post-content">
+          <h2 class="profile-section-title">👋 Xin chào!</h2>
+          <p>
+            Mình là <strong>Phạm Quang Hoàng Vũ</strong>, hiện đang theo học ngành
+            <strong>Công nghệ thông tin</strong> và định hướng trở thành
+            <strong>Java Backend Engineer</strong>.
+          </p>
+          <p>
+            Mình đặc biệt hứng thú với việc kết hợp kiến thức <strong>lập trình mạng</strong>
+            với <strong>Java Backend</strong> để xây dựng các hệ thống có thể triển khai
+            trong môi trường thực tế: từ bài toán nhỏ trên lớp đến những ứng dụng phục vụ nhu cầu đời sống.
+          </p>
+
+          <hr>
+
+          <h2>🌱 Hành trình học tập</h2>
+          <ul class="profile-timeline">
+            <li>
+              <strong>Năm đầu:</strong> Làm quen với lập trình, Java, JavaScript, HTML/CSS.
+            </li>
+            <li>
+              <strong>Sau đó:</strong> Thử sức với các bài tập console, mini project
+              nhỏ như quản lý sinh viên, quản lý câu lạc bộ.
+            </li>
+            <li>
+              <strong>Hiện tại:</strong> Tập trung vào <strong>Java Core, OOP, Collection, Exception</strong>
+              và tìm hiểu <strong>REST API, Database, Networking</strong>.
+            </li>
+          </ul>
+
+          <p>
+            Blog này ra đời vì mình nhận ra: nếu chỉ học mà không ghi lại,
+            kiến thức sẽ rất dễ trôi. Viết lại bằng tiếng Việt giúp mình hiểu sâu hơn
+            và cũng hy vọng giúp được những bạn đang học giống mình.
+          </p>
+
+          <hr>
+
+          <h2>💻 Mình đang học những gì?</h2>
+          <ul>
+            <li><strong>Java Core</strong>: cú pháp, OOP, xử lý lỗi, collection, array,…</li>
+            <li><strong>Lập trình mạng</strong>: mô hình client–server, HTTP, socket, các khái niệm Cisco cơ bản.</li>
+            <li><strong>Web backend</strong>: tư duy xây dựng API, cấu trúc project, kết nối database.</li>
+            <li><strong>Kỹ năng mềm</strong>: cách đọc tài liệu, tự tìm kiếm, ghi chép, trình bày lại kiến thức.</li>
+          </ul>
+
+          <hr>
+
+          <h2>🎯 Định hướng tương lai</h2>
+          <p>Trong 1–2 năm tới, mình đặt mục tiêu:</p>
+          <ul>
+            <li>Hoàn thiện series <strong>Java Core</strong> và các bài viết về OOP.</li>
+            <li>Xây dựng 1–2 dự án web thực tế với <strong>Spring Boot + MySQL</strong>.</li>
+            <li>Hiểu sâu hơn về <strong>mạng máy tính, bảo mật cơ bản</strong> để viết backend tốt hơn.</li>
+            <li>Tạo một <strong>portfolio cá nhân</strong> với đầy đủ project, blog và thông tin liên hệ.</li>
+          </ul>
+
+          <hr>
+
+          <h2>📫 Liên hệ với mình</h2>
+          <p>
+            📧 Email:
+            <strong><a href="mailto:hoangvuka2004@gmail.com">hoangvuka2004@gmail.com</a></strong><br>
+            🌐 GitHub:
+            <strong><a href="https://github.com/vupham-rainn">https://github.com/vupham-rainn</a></strong>
+          </p>
+
+          <blockquote>
+            <p>
+              💬 Nếu bạn cũng đang học lập trình, đừng ngại kết nối với mình.
+              Chúng ta có thể cùng học, cùng debug và cùng tiến bộ!
+            </p>
+          </blockquote>
+
+          <h3>✨ Cảm ơn bạn đã ghé thăm blog của mình!</h3>
+        </div>
+      </div>
+
+      <!-- CỘT PHẢI: THÔNG TIN NHANH -->
+      <aside class="profile-side">
+        <div class="profile-card">
+          <h3>📍 Thông tin nhanh</h3>
+          <p>
+            <strong>Vai trò:</strong> Sinh viên / Java Backend định hướng<br>
+            <strong>Sở trường:</strong> Java Core, OOP, tư duy giải quyết vấn đề
+          </p>
+          <ul class="profile-pill-list">
+            <li>Java</li>
+            <li>OOP</li>
+            <li>Networking</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+
+        <div class="profile-card">
+          <h3>🎯 Mục tiêu 2025</h3>
+          <ul>
+            <li>Hoàn thành blog series về Java cơ bản.</li>
+            <li>Xây dựng ít nhất 1 project backend hoàn chỉnh.</li>
+            <li>Luyện thêm giải bài thuật toán &amp; cấu trúc dữ liệu.</li>
+          </ul>
+        </div>
+
+        <div class="profile-card">
+          <h3>📚 Đang đọc / đang học</h3>
+          <ul>
+            <li>Giáo trình Java &amp; OOP.</li>
+            <li>Tài liệu về HTTP, TCP/IP, mô hình mạng.</li>
+            <li>Các blog &amp; video về Spring Boot cho người mới.</li>
+          </ul>
+        </div>
+
+        <div class="profile-card">
+          <h3>☕ Ngoài giờ code</h3>
+          <ul>
+            <li>Nghe nhạc và xem video chia sẻ kinh nghiệm IT.</li>
+            <li>Ghi chép lại kiến thức vào blog.</li>
+            <li>Tìm hiểu thêm về lộ trình nghề nghiệp IT.</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <span>&copy; 2025 <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Blog Lập Trình Mạng</a></span> ·
+    <span>&copy; 2025
+      <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Blog Lập Trình Mạng</a>
+    </span>
+    ·
     <span>
       Powered by
       <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -262,7 +408,8 @@
     </span>
   </footer>
 
-  <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+  <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)"
+     class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
       <path d="M12 6H0l6-6z" />
     </svg>
@@ -324,7 +471,7 @@
         html.dataset.theme = 'dark';
         localStorage.setItem("pref-theme", 'dark');
       }
-    })
+    });
   </script>
 </body>
 
