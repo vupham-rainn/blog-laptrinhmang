@@ -1,291 +1,423 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/blog-laptrinhmang/livereload.js?mindelay=10&amp;v=2&amp;port=57219&amp;path=blog-laptrinhmang/livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Java 06 Mang Array | Blog Lập Trình Mạng</title>
-<meta name="keywords" content="">
-<meta name="description" content="Java 06 Mang Array - Blog Lập Trình Mạng">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:57219/blog-laptrinhmang/posts/java-06-mang-array/">
-<link crossorigin="anonymous" href="/blog-laptrinhmang/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:57219/blog-laptrinhmang/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:57219/blog-laptrinhmang/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:57219/blog-laptrinhmang/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:57219/blog-laptrinhmang/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:57219/blog-laptrinhmang/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:57219/blog-laptrinhmang/posts/java-06-mang-array/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<head>
+  <script src="/blog-laptrinhmang/livereload.js?mindelay=10&amp;v=2&amp;port=57219&amp;path=blog-laptrinhmang/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Lộ trình tự học Kỹ sư Java từ con số 0 | Blog Lập Trình Mạng</title>
+  <meta name="keywords" content="Java, Backend, Spring Boot, Lộ trình tự học">
+  <meta name="description"
+        content="Lộ trình tự học Java Backend từ con số 0: Java Core, OOP, Database, Spring Boot, Networking và dự án thực tế.">
+  <meta name="author" content="">
+  <link rel="canonical" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/lo-trinh-tu-hoc-ky-su-java-tu-con-so-0/">
 
+  <!-- CSS -->
+  <link crossorigin="anonymous" href="/blog-laptrinhmang/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+
+  <!-- ICONS -->
+  <link rel="icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/apple-touch-icon.png">
+  <link rel="mask-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/safari-pinned-tab.svg">
+  <meta name="theme-color" content="#2e2e33">
+  <meta name="msapplication-TileColor" content="#2e2e33">
+  <link rel="alternate" hreflang="en" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/lo-trinh-tu-hoc-ky-su-java-tu-con-so-0/">
+
+  <noscript>
+    <style>
+      #theme-toggle,
+      .top-link {
+        display: none;
+      }
     </style>
     <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --theme: rgb(29, 30, 32);
+          --entry: rgb(46, 46, 51);
+          --primary: rgb(218, 218, 219);
+          --secondary: rgb(155, 156, 157);
+          --tertiary: rgb(65, 66, 68);
+          --content: rgb(196, 196, 197);
+          --code-block-bg: rgb(46, 46, 51);
+          --code-bg: rgb(55, 56, 62);
+          --border: rgb(51, 51, 51);
+          color-scheme: dark;
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
+        .list {
+          background: var(--theme);
         }
 
+        .toc {
+          background: var(--entry);
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        .list::-webkit-scrollbar-thumb {
+          border-color: var(--code-bg);
+        }
+      }
     </style>
-</noscript>
-<script>
+  </noscript>
+
+  <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
+      document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
+      document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
+      document.querySelector("html").dataset.theme = 'dark';
     } else {
-        document.querySelector("html").dataset.theme = 'light';
+      document.querySelector("html").dataset.theme = 'light';
     }
-
-</script>
+  </script>
 </head>
+
 <body id="top">
-    <header class="header">
+  <header class="header">
     <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:57219/blog-laptrinhmang/" accesskey="h" title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
+      <div class="logo">
+        <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" accesskey="h"
+           title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
+        <div class="logo-switches">
+          <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
         </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/posts/" title="Blog">
-                    <span>Blog</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/profile/" title="Profile">
-                    <span>Profile</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/chung-chi/" title="Chứng chỉ">
-                    <span>Chứng chỉ</span>
-                </a>
-            </li>
-        </ul>
+      </div>
+      <ul id="menu">
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" title="Home">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/" title="Blog">
+            <span class="active">Blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/profile/" title="Profile">
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/chung-chi/" title="Chứng chỉ">
+            <span>Chứng chỉ</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-</header>
-<main class="main">
+  </header>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:57219/blog-laptrinhmang/">Trang chủ</a>&nbsp;»&nbsp;<a href="http://localhost:57219/blog-laptrinhmang/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Java 06 Mang Array
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h1>
-    <div class="post-meta"><span title='2025-12-27 21:29:08 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span>
+  <main class="main">
 
-</div>
-  </header> 
+    <article class="post-single">
+      <header class="post-header">
+        <div class="breadcrumbs">
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Trang chủ</a>&nbsp;»&nbsp;
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/">Posts</a>
+        </div>
+        <h1 class="post-title entry-hint-parent">
+          Lộ trình tự học Kỹ sư Java từ con số 0
+          <span class="entry-hint" title="Lộ trình học Java cho người mới bắt đầu">
+            🚀
+          </span>
+        </h1>
+        <div class="post-meta">
+          <span title="2025-12-24 00:00:00 +0700 +07">24/12/2025</span>&nbsp;·&nbsp;
+          <span>~8 phút đọc</span>
+        </div>
+      </header>
 
+      <div class="post-content">
+        <p>
+          Nếu bạn đang bắt đầu từ <strong>con số 0</strong> và muốn trở thành
+          <strong>Kỹ sư Java Backend</strong>, lộ trình này sẽ giúp bạn biết
+          nên học gì trước – sau, học trong bao lâu và cần làm những gì.
+        </p>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="http://localhost:57219/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/">
-    <span class="title">« Trang trước</span>
-    <br>
-    <span>Java 07 Lop Va Doi Tuong</span>
-  </a>
-  <a class="next" href="http://localhost:57219/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/">
-    <span class="title">Trang tiếp theo »</span>
-    <br>
-    <span>Java 05 Vong Lap Trong Java</span>
-  </a>
-</nav>
+        <hr>
 
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:57219/blog-laptrinhmang/">Blog Lập Trình Mạng</a></span> · 
+        <h2 id="doi-tuong-phu-hop">👨‍🎓 Đối tượng phù hợp</h2>
+        <ul>
+          <li>Sinh viên CNTT chưa có nền tảng lập trình vững.</li>
+          <li>Người trái ngành muốn chuyển sang Java Backend.</li>
+          <li>Đã học chút C/C++ hoặc Python nhưng muốn nghiêm túc với Java.</li>
+        </ul>
 
+        <hr>
+
+        <h2 id="tong-quan-lo-trinh">🗺 Tổng quan lộ trình</h2>
+        <ol>
+          <li>Làm quen với lập trình &amp; môi trường Java.</li>
+          <li>Java Core: biến, kiểu dữ liệu, toán tử, câu điều kiện, vòng lặp, mảng.</li>
+          <li>OOP: lớp, đối tượng, kế thừa, đa hình, đóng gói.</li>
+          <li>Làm việc với dữ liệu: file, JDBC, MySQL.</li>
+          <li>Spring Boot &amp; REST API.</li>
+          <li>Dự án nhỏ &amp; portfolio cá nhân.</li>
+        </ol>
+
+        <hr>
+
+        <h2 id="giai-doan-1">📍 Giai đoạn 1: Làm quen với Java (1–2 tuần)</h2>
+        <p><strong>Mục tiêu:</strong> Biết Java là gì, cài đặt được môi trường và chạy chương trình đầu tiên.</p>
+        <ul>
+          <li>Cài đặt JDK, IntelliJ IDEA / VS Code.</li>
+          <li>Chạy chương trình “Hello World”.</li>
+          <li>Hiểu <code>main()</code>, cách biên dịch &amp; chạy chương trình.</li>
+          <li>Làm quen với cách viết code, comment, format cơ bản.</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="giai-doan-2">📍 Giai đoạn 2: Java Core nền tảng (3–6 tuần)</h2>
+        <p><strong>Mục tiêu:</strong> Nắm chắc phần “xương sống” của ngôn ngữ.</p>
+        <ul>
+          <li><strong>Biến &amp; kiểu dữ liệu</strong> (Java 02)</li>
+          <li><strong>Toán tử &amp; biểu thức</strong> (Java 03)</li>
+          <li><strong>Cấu trúc điều kiện</strong> (Java 04)</li>
+          <li><strong>Vòng lặp trong Java</strong> (Java 05)</li>
+          <li><strong>Mảng (Array)</strong> (Java 06)</li>
+        </ul>
+        <p>
+          Ở giai đoạn này bạn nên luyện thật nhiều bài tập nhỏ: tính toán, xử lý mảng, làm menu console, mini app nhập điểm,
+          quản lý sinh viên… để quen cú pháp và tư duy.
+        </p>
+
+        <hr>
+
+        <h2 id="giai-doan-3">📍 Giai đoạn 3: OOP &amp; thiết kế chương trình (4–6 tuần)</h2>
+        <p><strong>Mục tiêu:</strong> Biết viết chương trình theo hướng đối tượng, dễ mở rộng &amp; bảo trì.</p>
+        <ul>
+          <li><strong>Lớp &amp; đối tượng</strong> (Java 07).</li>
+          <li><strong>Kế thừa &amp; đa hình</strong> (Java 08).</li>
+          <li>Xây dựng các model: <code>Student</code>, <code>Product</code>, <code>Order</code>…</li>
+          <li>Tổ chức code theo package, tách file hợp lý.</li>
+        </ul>
+        <p>
+          Đây là giai đoạn cực kỳ quan trọng nếu bạn muốn đi sâu vào backend. Hãy tập trung hiểu “tư duy OOP”
+          chứ không chỉ học thuộc cú pháp.
+        </p>
+
+        <hr>
+
+        <h2 id="giai-doan-4">📍 Giai đoạn 4: Làm việc với dữ liệu (3–6 tuần)</h2>
+        <p><strong>Mục tiêu:</strong> Biết cách lưu trữ &amp; truy xuất dữ liệu thực tế.</p>
+        <ul>
+          <li>Ôn lại SQL cơ bản: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</li>
+          <li>Java JDBC: kết nối Java ↔ MySQL.</li>
+          <li>Viết chương trình CRUD đơn giản (thêm/sửa/xóa/tìm kiếm).</li>
+          <li>Hiểu khái niệm <strong>DAO / Repository</strong> trong ứng dụng.</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="giai-doan-5">📍 Giai đoạn 5: Spring Boot &amp; REST API (1–2 tháng)</h2>
+        <p><strong>Mục tiêu:</strong> Xây được 1 REST API backend hoàn chỉnh.</p>
+        <ul>
+          <li>Tạo project Spring Boot (Spring Initializr).</li>
+          <li>Controller, Service, Repository – tách lớp rõ ràng.</li>
+          <li>Xây dựng REST API CRUD cho 1 entity (VD: User, Product).</li>
+          <li>Kết nối database với Spring Data JPA.</li>
+          <li>Đọc hiểu JSON, status code, response body.</li>
+          <li>Cài đặt <strong>Spring Security</strong> cơ bản cho login / bảo vệ API.</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="giai-doan-6">📍 Giai đoạn 6: Dự án nhỏ &amp; portfolio (1–2 tháng)</h2>
+        <p><strong>Mục tiêu:</strong> Có ít nhất 1–2 dự án để đưa vào CV/GitHub.</p>
+        <ul>
+          <li>Chọn 1 bài toán thực tế: quản lý cửa hàng, quản lý câu lạc bộ, blog, mini e-commerce,…</li>
+          <li>Phân tích yêu cầu → thiết kế database → thiết kế API.</li>
+          <li>Code backend bằng Spring Boot + MySQL.</li>
+          <li>Đưa code lên GitHub và viết README mô tả dự án.</li>
+        </ul>
+
+        <hr>
+
+        <h2 id="meo">💡 Một vài mẹo để không bỏ cuộc giữa chừng</h2>
+        <ul>
+          <li>Chia mục tiêu thành từng tuần, ghi checklist rõ ràng.</li>
+          <li>Code mỗi ngày 1 chút (30–60 phút), đều hơn là học dồn.</li>
+          <li>Lưu lại bài tập, note lỗi hay gặp lên blog của chính bạn.</li>
+          <li>Xem thêm code mẫu trên GitHub nhưng cố gắng tự gõ lại, không copy-paste.</li>
+        </ul>
+
+        <hr>
+
+        <h3 id="ket-luan">✨ Kết luận</h3>
+        <p>
+          Tự học Java từ con số 0 không hề dễ, nhưng hoàn toàn làm được nếu bạn đi từng bước rõ ràng,
+          có lộ trình cụ thể và kiên trì. Hy vọng bài viết này giúp bạn có một “bản đồ” để bắt đầu.
+          Chúc bạn sớm trở thành <strong>Kỹ sư Java Backend</strong> như mục tiêu của mình!
+        </p>
+      </div>
+
+      <footer class="post-footer">
+        <ul class="post-tags">
+          <li><a href="https://vupham-rainn.github.io/blog-laptrinhmang/tags/java/">Java</a></li>
+          <li><a href="https://vupham-rainn.github.io/blog-laptrinhmang/tags/backend/">Backend</a></li>
+          <li><a href="https://vupham-rainn.github.io/blog-laptrinhmang/tags/lo-trinh/">Lộ trình</a></li>
+        </ul>
+
+        <nav class="paginav">
+          <a class="prev" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/">
+            <span class="title">« Bài trước</span><br>
+            <span>Java 07 – Lớp &amp; đối tượng</span>
+          </a>
+          <a class="next" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/">
+            <span class="title">Bài tiếp theo »</span><br>
+            <span>Java 05 – Vòng lặp trong Java</span>
+          </a>
+        </nav>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <span>&copy; 2025 <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Blog Lập Trình Mạng</a></span> ·
     <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+      Powered by
+      <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+      <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  </footer>
 
-<script>
-    let menu = document.getElementById('menu');
+  <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+      <path d="M12 6H0l6-6z" />
+    </svg>
+  </a>
+
+  <script>
+    let menu = document.getElementById("menu");
     if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
+      const scrollPosition = localStorage.getItem("menu-scroll-position");
+      if (scrollPosition) {
+        menu.scrollLeft = parseInt(scrollPosition, 10);
+      }
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+            behavior: "smooth"
+          });
+        } else {
+          document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+        }
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
     });
+  </script>
 
-</script>
-<script>
+  <script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        mybutton.style.visibility = "visible";
+        mybutton.style.opacity = "1";
+      } else {
+        mybutton.style.visibility = "hidden";
+        mybutton.style.opacity = "0";
+      }
     };
+  </script>
 
-</script>
-<script>
+  <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'Sao chép';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'Đã sao chép!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'Sao chép';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
+      const html = document.querySelector("html");
+      if (html.dataset.theme === "dark") {
+        html.dataset.theme = 'light';
+        localStorage.setItem("pref-theme", 'light');
+      } else {
+        html.dataset.theme = 'dark';
+        localStorage.setItem("pref-theme", 'dark');
+      }
     });
-</script>
+  </script>
+
+  <!-- Nút sao chép code (nếu bài có code) -->
+  <script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+      const container = codeblock.parentNode.parentNode;
+
+      const copybutton = document.createElement('button');
+      copybutton.classList.add('copy-code');
+      copybutton.innerHTML = 'Sao chép';
+
+      function copyingDone() {
+        copybutton.innerHTML = 'Đã sao chép!';
+        setTimeout(() => {
+          copybutton.innerHTML = 'Sao chép';
+        }, 2000);
+      }
+
+      copybutton.addEventListener('click', () => {
+        if ('clipboard' in navigator) {
+          navigator.clipboard.writeText(codeblock.textContent);
+          copyingDone();
+          return;
+        }
+
+        const range = document.createRange();
+        range.selectNodeContents(codeblock);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        try {
+          document.execCommand('copy');
+          copyingDone();
+        } catch (e) { }
+        selection.removeRange(range);
+      });
+
+      if (container.classList.contains("highlight")) {
+        container.appendChild(copybutton);
+      } else if (container.parentNode.firstChild === container) {
+        // do nothing
+      } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName === "TABLE") {
+        codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+      } else {
+        codeblock.parentNode.appendChild(copybutton);
+      }
+    });
+  </script>
 </body>
 
 </html>
