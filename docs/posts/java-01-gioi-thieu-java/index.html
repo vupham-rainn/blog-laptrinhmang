@@ -1,286 +1,588 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/blog-laptrinhmang/livereload.js?mindelay=10&amp;v=2&amp;port=57219&amp;path=blog-laptrinhmang/livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Java 01 Gioi Thieu Java | Blog Lập Trình Mạng</title>
-<meta name="keywords" content="">
-<meta name="description" content="Java 01 Gioi Thieu Java - Blog Lập Trình Mạng">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:57219/blog-laptrinhmang/posts/java-01-gioi-thieu-java/">
-<link crossorigin="anonymous" href="/blog-laptrinhmang/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:57219/blog-laptrinhmang/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:57219/blog-laptrinhmang/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:57219/blog-laptrinhmang/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:57219/blog-laptrinhmang/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:57219/blog-laptrinhmang/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:57219/blog-laptrinhmang/posts/java-01-gioi-thieu-java/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<head>
+  <script src="/blog-laptrinhmang/livereload.js?mindelay=10&amp;v=2&amp;port=57219&amp;path=blog-laptrinhmang/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="noindex, nofollow">
 
+  <title>Nắm vững OOP trong Java qua ví dụ thực tế | Blog Lập Trình Mạng</title>
+
+  <meta name="keywords" content="Java OOP, Lập trình hướng đối tượng, Java Core, Class, Object">
+  <meta name="description"
+        content="Hiểu rõ OOP trong Java qua ví dụ thực tế: Class, Object, Encapsulation, Kế thừa, Đa hình và cách áp dụng vào bài toán thật.">
+  <meta name="author" content="">
+
+  <link rel="canonical" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/nam-vung-oop-trong-java-qua-vi-du-thuc-te/">
+
+  <link crossorigin="anonymous" href="/blog-laptrinhmang/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+
+  <link rel="icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/apple-touch-icon.png">
+  <link rel="mask-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/safari-pinned-tab.svg">
+
+  <meta name="theme-color" content="#2e2e33">
+  <meta name="msapplication-TileColor" content="#2e2e33">
+
+  <link rel="alternate" hreflang="en"
+        href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/nam-vung-oop-trong-java-qua-vi-du-thuc-te/">
+
+  <noscript>
+    <style>
+      #theme-toggle,
+      .top-link {
+        display: none;
+      }
     </style>
     <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --theme: rgb(29, 30, 32);
+          --entry: rgb(46, 46, 51);
+          --primary: rgb(218, 218, 219);
+          --secondary: rgb(155, 156, 157);
+          --tertiary: rgb(65, 66, 68);
+          --content: rgb(196, 196, 197);
+          --code-block-bg: rgb(46, 46, 51);
+          --code-bg: rgb(55, 56, 62);
+          --border: rgb(51, 51, 51);
+          color-scheme: dark;
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
+        .list {
+          background: var(--theme);
         }
 
+        .toc {
+          background: var(--entry);
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        .list::-webkit-scrollbar-thumb {
+          border-color: var(--code-bg);
+        }
+      }
     </style>
-</noscript>
-<script>
+  </noscript>
+
+  <script>
     if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
+      document.querySelector("html").dataset.theme = 'dark';
     } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
+      document.querySelector("html").dataset.theme = 'light';
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
+      document.querySelector("html").dataset.theme = 'dark';
     } else {
-        document.querySelector("html").dataset.theme = 'light';
+      document.querySelector("html").dataset.theme = 'light';
+    }
+  </script>
+</head>
+
+<body id="top">
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" accesskey="h"
+           title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
+        <div class="logo-switches">
+          <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <ul id="menu">
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" title="Home">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/" title="Blog">
+            <span class="active">Blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/profile/" title="Profile">
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/chung-chi/" title="Chứng chỉ">
+            <span>Chứng chỉ</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <article class="post-single">
+      <header class="post-header">
+        <div class="breadcrumbs">
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Trang chủ</a>&nbsp;»&nbsp;
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/">Posts</a>
+        </div>
+        <h1 class="post-title entry-hint-parent">
+          Nắm vững OOP trong Java qua ví dụ thực tế
+          <span class="entry-hint" title="Java OOP cơ bản đến nâng cao">OOP</span>
+        </h1>
+        <div class="post-meta">
+          <span title="2025-12-27 21:28:31 +0700 +07">27/12/2025</span>&nbsp;·&nbsp;
+          <span>~10 phút đọc</span>
+        </div>
+      </header>
+
+      <!-- NỘI DUNG BÀI VIẾT -->
+      <div class="post-content">
+
+        <p>
+          Lập trình hướng đối tượng (<strong>OOP – Object Oriented Programming</strong>) là “trái tim”
+          của Java. Nếu bạn nắm chắc OOP, việc học <strong>Spring Boot, Hibernate, Microservices</strong>
+          sau này sẽ dễ hơn rất nhiều.
+        </p>
+
+        <hr>
+
+        <h2 id="oop-la-gi">💡 OOP là gì?</h2>
+        <p>
+          Thay vì nghĩ theo kiểu “từng dòng lệnh”, OOP muốn bạn nghĩ theo kiểu
+          <strong>đối tượng ngoài đời thật</strong>:
+        </p>
+        <ul>
+          <li><strong>Student</strong>, <strong>Product</strong>, <strong>Order</strong>, <strong>Account</strong>…</li>
+          <li>Mỗi đối tượng có <strong>thuộc tính</strong> (data) và <strong>hành vi</strong> (method).</li>
+        </ul>
+
+        <p>Một ví dụ cực đơn giản:</p>
+
+        <pre><code class="language-java">
+class Student {
+    String name;
+    int age;
+
+    void printInfo() {
+        System.out.println(name + " - " + age + " tuổi");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();  // Tạo object
+        s.name = "Vũ";
+        s.age = 20;
+
+        s.printInfo();             // Gọi method
+    }
+}
+        </code></pre>
+
+        <p>
+          Ở đây:
+          <br>👉 <code>Student</code> là <strong>class</strong>
+          <br>👉 <code>s</code> là <strong>object</strong> (thể hiện của class)
+        </p>
+
+        <hr>
+
+        <h2 id="4-tru-cot">🏛 4 trụ cột của OOP trong Java</h2>
+
+        <h3 id="encapsulation">1. Encapsulation – Đóng gói</h3>
+        <p>
+          Đóng gói nghĩa là <strong>giấu bớt chi tiết bên trong</strong>, chỉ cho phép truy cập qua
+          các method được định nghĩa sẵn. Trong Java ta dùng <code>private</code>, <code>public</code>,
+          getter/setter.
+        </p>
+
+        <pre><code class="language-java">
+class BankAccount {
+    private String owner;
+    private double balance;
+
+    public BankAccount(String owner, double balance) {
+        this.owner = owner;
+        this.balance = balance;
     }
 
-</script>
-</head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:57219/blog-laptrinhmang/" accesskey="h" title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/posts/" title="Blog">
-                    <span>Blog</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/profile/" title="Profile">
-                    <span>Profile</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:57219/blog-laptrinhmang/chung-chi/" title="Chứng chỉ">
-                    <span>Chứng chỉ</span>
-                </a>
-            </li>
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount){
+        if(amount &gt; 0){
+            balance += amount;
+        }
+    }
+}
+        </code></pre>
+
+        <p>
+          👉 Bên ngoài <strong>không thể sửa trực tiếp</strong> <code>balance</code>, mà phải đi qua
+          <code>deposit()</code>, giúp code an toàn hơn.
+        </p>
+
+        <h3 id="inheritance">2. Inheritance – Kế thừa</h3>
+        <p>
+          Kế thừa cho phép class con <strong>dùng lại</strong> thuộc tính &amp; hành vi của class cha.
+        </p>
+
+        <pre><code class="language-java">
+class Person {
+    String name;
+    int age;
+
+    void introduce() {
+        System.out.println("Mình là " + name + ", " + age + " tuổi.");
+    }
+}
+
+class Student extends Person {
+    String major;
+
+    void study() {
+        System.out.println(name + " đang học ngành " + major);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.name = "Vũ";
+        s.age = 20;
+        s.major = "Công nghệ thông tin";
+
+        s.introduce(); // Kế thừa từ Person
+        s.study();     // Method riêng của Student
+    }
+}
+        </code></pre>
+
+        <h3 id="polymorphism">3. Polymorphism – Đa hình</h3>
+        <p>
+          Đa hình nghĩa là <strong>cùng một hành động nhưng cách thực hiện khác nhau</strong>.
+          Thường gặp nhất là <strong>override method</strong>.
+        </p>
+
+        <pre><code class="language-java">
+class Animal {
+    void speak() {
+        System.out.println("Some sound...");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void speak() {
+        System.out.println("Gâu gâu");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void speak() {
+        System.out.println("Meo meo");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a1 = new Dog();
+        Animal a2 = new Cat();
+
+        a1.speak(); // Gâu gâu
+        a2.speak(); // Meo meo
+    }
+}
+        </code></pre>
+
+        <p>
+          👉 Cùng gọi <code>speak()</code> nhưng kết quả phụ thuộc vào
+          <strong>kiểu object thực tế</strong> (Dog / Cat).
+        </p>
+
+        <h3 id="abstraction">4. Abstraction – Trừu tượng hóa</h3>
+        <p>
+          Trừu tượng hóa là tập trung vào <strong>cái cần dùng</strong>, không quan tâm chi tiết
+          triển khai. Thực hiện qua <code>abstract class</code> hoặc <code>interface</code>.
+        </p>
+
+        <pre><code class="language-java">
+abstract class Shape {
+    abstract double area();
+}
+
+class Rectangle extends Shape {
+    double w, h;
+
+    Rectangle(double w, double h) {
+        this.w = w;
+        this.h = h;
+    }
+
+    @Override
+    double area() {
+        return w * h;
+    }
+}
+        </code></pre>
+
+        <hr>
+
+        <h2 id="vi-du-thuc-te">🧩 Ví dụ thực tế: Quản lý khóa học Java</h2>
+        <p>
+          Giả sử bạn viết ứng dụng nhỏ quản lý khóa học Java: có <strong>Student</strong>,
+          <strong>Course</strong>, <strong>Enrollment</strong> (đăng ký học).
+        </p>
+
+        <pre><code class="language-java">
+class Student {
+    private String name;
+    private String email;
+
+    public Student(String name, String email){
+        this.name = name;
+        this.email = email;
+    }
+
+    public String getName(){
+        return name;
+    }
+}
+
+class Course {
+    private String title;
+    private String level;
+
+    public Course(String title, String level){
+        this.title = title;
+        this.level = level;
+    }
+
+    public String getTitle(){
+        return title;
+    }
+}
+
+class Enrollment {
+    private Student student;
+    private Course course;
+
+    public Enrollment(Student student, Course course){
+        this.student = student;
+        this.course = course;
+    }
+
+    public void printInfo(){
+        System.out.println(student.getName() + " đăng ký khóa " + course.getTitle());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student("Vũ", "vu@example.com");
+        Course c = new Course("Java OOP Cơ bản", "Beginner");
+
+        Enrollment e = new Enrollment(s, c);
+        e.printInfo();
+    }
+}
+        </code></pre>
+
+        <p>
+          Bạn thấy đó:
+        </p>
+        <ul>
+          <li><strong>Student, Course, Enrollment</strong> là các đối tượng ngoài đời.</li>
+          <li>Mỗi class chịu trách nhiệm một phần nhỏ → code dễ hiểu, dễ mở rộng.</li>
         </ul>
-    </nav>
-</header>
-<main class="main">
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:57219/blog-laptrinhmang/">Trang chủ</a>&nbsp;»&nbsp;<a href="http://localhost:57219/blog-laptrinhmang/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Java 01 Gioi Thieu Java
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h1>
-    <div class="post-meta"><span title='2025-12-27 21:28:31 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span>
+        <hr>
 
-</div>
-  </header> 
+        <h2 id="meo-hoc">📌 Mẹo học OOP hiệu quả</h2>
+        <ul>
+          <li>Đừng chỉ đọc lý thuyết – hãy <strong>tự gõ lại code</strong>.</li>
+          <li>Thử tự nghĩ ra class từ đời sống: <code>Book</code>, <code>Order</code>, <code>Bill</code>, <code>TableBida</code>…</li>
+          <li>Tập tách class cho gọn: 1 class làm <strong>ít chức năng nhưng rõ ràng</strong>.</li>
+          <li>Khi đọc code người khác, hãy thử vẽ sơ đồ class.</li>
+        </ul>
 
+        <hr>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="http://localhost:57219/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/">
-    <span class="title">« Trang trước</span>
-    <br>
-    <span>Java 02 Bien Kieu Du Lieu</span>
-  </a>
-</nav>
+        <h3 id="ket-luan">✨ Kết luận</h3>
+        <p>
+          OOP không chỉ là 4 từ khóa “Encapsulation, Inheritance, Polymorphism, Abstraction” mà là
+          <strong>cách suy nghĩ khi thiết kế chương trình</strong>. Khi bạn đã quen việc mô hình hóa
+          bài toán thành đối tượng, mọi thứ trong Java Backend (Spring, JPA, Service, Controller,…)
+          sẽ trở nên rất tự nhiên.
+        </p>
+        <p>
+          Hãy xem bài này như nền tảng, sau đó đọc tiếp series Java khác trong blog để luyện tập
+          thêm qua các ví dụ thực tế nhé! 💪
+        </p>
 
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:57219/blog-laptrinhmang/">Blog Lập Trình Mạng</a></span> · 
+      </div>
+      <!-- HẾT NỘI DUNG -->
 
+      <footer class="post-footer">
+        <ul class="post-tags">
+          <li><a href="https://vupham-rainn.github.io/blog-laptrinhmang/tags/java/">Java</a></li>
+          <li><a href="https://vupham-rainn.github.io/blog-laptrinhmang/tags/oop/">OOP</a></li>
+          <li><a href="https://vupham-rainn.github.io/blog-laptrinhmang/tags/java-core/">Java Core</a></li>
+        </ul>
+
+        <nav class="paginav">
+          <a class="prev" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/">
+            <span class="title">« Bài trước</span><br>
+            <span>Java 02 – Biến &amp; kiểu dữ liệu</span>
+          </a>
+        </nav>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <span>&copy; 2025 <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Blog Lập Trình Mạng</a></span> ·
     <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+      Powered by
+      <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+      <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  </footer>
 
-<script>
+  <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+      <path d="M12 6H0l6-6z" />
+    </svg>
+  </a>
+
+  <script>
     let menu = document.getElementById('menu');
     if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
+      const scrollPosition = localStorage.getItem("menu-scroll-position");
+      if (scrollPosition) {
+        menu.scrollLeft = parseInt(scrollPosition, 10);
+      }
+
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+            behavior: "smooth"
+          });
+        } else {
+          document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+        }
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
     });
+  </script>
 
-</script>
-<script>
+  <script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        mybutton.style.visibility = "visible";
+        mybutton.style.opacity = "1";
+      } else {
+        mybutton.style.visibility = "hidden";
+        mybutton.style.opacity = "0";
+      }
     };
+  </script>
 
-</script>
-<script>
+  <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'Sao chép';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'Đã sao chép!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'Sao chép';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
+      const html = document.querySelector("html");
+      if (html.dataset.theme === "dark") {
+        html.dataset.theme = 'light';
+        localStorage.setItem("pref-theme", 'light');
+      } else {
+        html.dataset.theme = 'dark';
+        localStorage.setItem("pref-theme", 'dark');
+      }
     });
-</script>
+  </script>
+
+  <script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+      const container = codeblock.parentNode.parentNode;
+
+      const copybutton = document.createElement('button');
+      copybutton.classList.add('copy-code');
+      copybutton.innerHTML = 'Sao chép';
+
+      function copyingDone() {
+        copybutton.innerHTML = 'Đã sao chép!';
+        setTimeout(() => {
+          copybutton.innerHTML = 'Sao chép';
+        }, 2000);
+      }
+
+      copybutton.addEventListener('click', (cb) => {
+        if ('clipboard' in navigator) {
+          navigator.clipboard.writeText(codeblock.textContent);
+          copyingDone();
+          return;
+        }
+
+        const range = document.createRange();
+        range.selectNodeContents(codeblock);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        try {
+          document.execCommand('copy');
+          copyingDone();
+        } catch (e) { };
+        selection.removeRange(range);
+      });
+
+      if (container.classList.contains("highlight")) {
+        container.appendChild(copybutton);
+      } else if (container.parentNode.firstChild == container) {
+
+      } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+
+        codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+      } else {
+
+        codeblock.parentNode.appendChild(copybutton);
+      }
+    });
+  </script>
 </body>
 
 </html>
