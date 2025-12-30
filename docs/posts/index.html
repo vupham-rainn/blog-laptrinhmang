@@ -1,375 +1,423 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/blog-laptrinhmang/livereload.js?mindelay=10&amp;v=2&amp;port=57219&amp;path=blog-laptrinhmang/livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Posts | Blog Lập Trình Mạng</title>
-<meta name="keywords" content="">
-<meta name="description" content="Posts - Blog Lập Trình Mạng">
-<meta name="author" content="">
-<link rel="canonical" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/">
-<link crossorigin="anonymous" href="/blog-laptrinhmang/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/apple-touch-icon.png">
-<link rel="mask-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<head>
+  <script src="/blog-laptrinhmang/livereload.js?mindelay=10&amp;v=2&amp;port=57219&amp;path=blog-laptrinhmang/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Posts | Blog Lập Trình Mạng</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Posts - Blog Lập Trình Mạng">
+  <meta name="author" content="">
+  <link rel="canonical" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/">
 
+  <!-- CSS -->
+  <link rel="preload" href="/blog-laptrinhmang/assets/css/stylesheet.css" as="style" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog-laptrinhmang/assets/css/stylesheet.css">
+
+  <!-- ICONS -->
+  <link rel="icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://vupham-rainn.github.io/blog-laptrinhmang/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/apple-touch-icon.png">
+  <link rel="mask-icon" href="https://vupham-rainn.github.io/blog-laptrinhmang/safari-pinned-tab.svg">
+  <meta name="theme-color" content="#2e2e33">
+  <meta name="msapplication-TileColor" content="#2e2e33">
+  <link rel="alternate" type="application/rss+xml" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/index.xml" title="rss">
+  <link rel="alternate" hreflang="en" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/">
+
+  <noscript>
+    <style>
+      #theme-toggle,
+      .top-link {
+        display: none;
+      }
     </style>
     <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --theme: rgb(29, 30, 32);
+          --entry: rgb(46, 46, 51);
+          --primary: rgb(218, 218, 219);
+          --secondary: rgb(155, 156, 157);
+          --tertiary: rgb(65, 66, 68);
+          --content: rgb(196, 196, 197);
+          --code-block-bg: rgb(46, 46, 51);
+          --code-bg: rgb(55, 56, 62);
+          --border: rgb(51, 51, 51);
+          color-scheme: dark;
         }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
+        .list {
+          background: var(--theme);
         }
 
+        .toc {
+          background: var(--entry);
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        .list::-webkit-scrollbar-thumb {
+          border-color: var(--code-bg);
+        }
+      }
     </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
+  </noscript>
+
+  <!-- STYLE NHỎ RIÊNG CHO TRANG POSTS (TUỲ CHỌN) -->
+  <style>
+    .posts-page-header {
+      margin-bottom: 1.5rem;
     }
 
-</script>
+    .posts-page-header h1 {
+      margin-bottom: .25rem;
+    }
+
+    .posts-page-subtitle {
+      color: var(--secondary);
+      font-size: .95rem;
+    }
+  </style>
+
+  <script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+      document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+      document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.querySelector("html").dataset.theme = 'dark';
+    } else {
+      document.querySelector("html").dataset.theme = 'light';
+    }
+  </script>
 </head>
+
 <body class="list" id="top">
-    <header class="header">
+  <header class="header">
     <nav class="nav">
-        <div class="logo">
-            <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" accesskey="h" title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
+      <div class="logo">
+        <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" accesskey="h"
+          title="Blog Lập Trình Mạng (Alt + H)">Blog Lập Trình Mạng</a>
+        <div class="logo-switches">
+          <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
         </div>
-        <ul id="menu">
-            <li>
-                <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/" title="Blog">
-                    <span class="active">Blog</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://vupham-rainn.github.io/blog-laptrinhmang/profile/" title="Profile">
-                    <span>Profile</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://vupham-rainn.github.io/blog-laptrinhmang/chung-chi/" title="Chứng chỉ">
-                    <span>Chứng chỉ</span>
-                </a>
-            </li>
-        </ul>
+      </div>
+      <ul id="menu">
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/" title="Home">
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/" title="Blog">
+            <span class="active">Blog</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/profile/" title="Profile">
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vupham-rainn.github.io/blog-laptrinhmang/chung-chi/" title="Chứng chỉ">
+            <span>Chứng chỉ</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-</header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:57219/blog-laptrinhmang/">Trang chủ</a></div>
-  <h1>
-    Posts
-  </h1>
-</header>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 09 Xu Ly Ngoai Le
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
   </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:29:23 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 09 Xu Ly Ngoai Le" href="http://localhost:57219/blog-laptrinhmang/posts/java-09-xu-ly-ngoai-le/"></a>
-</article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 08 Ke Thua Va Da Hinh
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:29:18 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 08 Ke Thua Va Da Hinh" href="http://localhost:57219/blog-laptrinhmang/posts/java-08-ke-thua-va-da-hinh/"></a>
-</article>
+  <main class="main">
+    <header class="page-header posts-page-header">
+      <div class="breadcrumbs">
+        <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Trang chủ</a>
+      </div>
+      <h1>Danh sách bài viết</h1>
+      <p class="posts-page-subtitle">
+        Tổng hợp toàn bộ series Java &amp; lập trình mạng mình đang xây dựng.
+      </p>
+    </header>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 07 Lop Va Doi Tuong
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:29:13 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 07 Lop Va Doi Tuong" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/"></a>
-</article>
+    <section class="home-posts">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 06 Mang Array
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:29:08 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 06 Mang Array" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-06-mang-array/"></a>
-</article>
+  <!-- CARD 1 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">27/12/2025</span>
+      <span class="post-card__tag">Java Core</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-09-xu-ly-ngoai-le/">
+        Nắm vững OOP trong Java qua ví dụ thực tế
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Tóm tắt các khái niệm Class, Object, Inheritance, Polymorphism, Interface
+      và cách áp dụng vào các bài toán thật.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-09-xu-ly-ngoai-le/">
+      Xem thêm →
+    </a>
+  </article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 05 Vong Lap Trong Java
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:29:03 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 05 Vong Lap Trong Java" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/"></a>
-</article>
+  <!-- CARD 2 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">26/12/2025</span>
+      <span class="post-card__tag">Spring Boot</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-08-ke-thua-va-da-hinh/">
+        Xây dựng REST API đầu tiên với Spring Boot
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Tạo project, cấu hình controller, xử lý request/response và test API
+      bằng Postman theo cách đơn giản nhất.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-08-ke-thua-va-da-hinh/">
+      Xem thêm →
+    </a>
+  </article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 04 Cau Truc Dieu Kien
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:28:56 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 04 Cau Truc Dieu Kien" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/"></a>
-</article>
+  <!-- CARD 3 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">25/12/2025</span>
+      <span class="post-card__tag">Networking</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/">
+        Từ Networking Basics đến Java Backend: Kết nối hai thế giới
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Vì sao hiểu mạng (IP, TCP, HTTP) lại giúp viết backend tốt hơn? Bài viết
+      kết nối kiến thức Cisco với lập trình Java.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-07-lop-va-doi-tuong/">
+      Xem thêm →
+    </a>
+  </article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 03 Toan Tu Va Bieu Thuc
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:28:50 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 03 Toan Tu Va Bieu Thuc" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-03-toan-tu-va-bieu-thuc/"></a>
-</article>
+  <!-- CARD 4 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">24/12/2025</span>
+      <span class="post-card__tag">Lộ trình</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-06-mang-array/">
+        Lộ trình tự học Kỹ sư Java từ con số 0
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Tổng hợp roadmap: Java Core → OOP → JDBC / JPA → Spring Boot →
+      Database → Project thực tế.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-06-mang-array/">
+      Xem thêm →
+    </a>
+  </article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 02 Bien Kieu Du Lieu
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:28:41 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 02 Bien Kieu Du Lieu" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/"></a>
-</article>
+  <!-- CARD 5 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">23/12/2025</span>
+      <span class="post-card__tag">Java</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/">
+        Hiểu về JVM – Trái tim của Java
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      JVM là gì? Tại sao Java lại chạy được trên mọi hệ điều hành?
+      Bài viết giúp bạn nắm rõ nền tảng Java Virtual Machine.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-05-vong-lap-trong-java/">
+      Xem thêm →
+    </a>
+  </article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Java 01 Gioi Thieu Java
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2025-12-27 21:28:31 +0700 +07'>December 27, 2025</span>&nbsp;·&nbsp;<span>0 phút</span></footer>
-  <a class="entry-link" aria-label="post link to Java 01 Gioi Thieu Java" href="https://vupham-rainn.github.io/blog-laptrinhmang/posts/java-01-gioi-thieu-java/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Blog Lập Trình Mạng</a></span> · 
+  <!-- CARD 6 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">22/12/2025</span>
+      <span class="post-card__tag">Database</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/">
+        Kết nối Java với MySQL bằng JDBC
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Hướng dẫn từng bước: tạo database, viết code kết nối JDBC,
+      truy vấn dữ liệu và xử lý lỗi.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-04-cau-truc-dieu-kien/">
+      Xem thêm →
+    </a>
+  </article>
 
+  <!-- CARD 7 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">21/12/2025</span>
+      <span class="post-card__tag">Spring Boot</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-03-toan-tu-va-bieu-thuc/">
+        Tạo REST API Login cơ bản với Spring Security
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Giới thiệu Authentication, Authorization và cấu hình bảo mật
+      cơ bản trong Spring Security.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-03-toan-tu-va-bieu-thuc/">
+      Xem thêm →
+    </a>
+  </article>
+
+  <!-- CARD 8 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">20/12/2025</span>
+      <span class="post-card__tag">Networking</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/">
+        HTTP là gì? Kiến thức mạng cơ bản cho lập trình viên Java
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Tìm hiểu cách client–server giao tiếp, request/response,
+      status code và JSON API.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-02-bien-kieu-du-lieu/">
+      Xem thêm →
+    </a>
+  </article>
+
+  <!-- CARD 9 -->
+  <article class="post-card">
+    <div class="post-card__meta">
+      <span class="post-card__date">19/12/2025</span>
+      <span class="post-card__tag">Career</span>
+    </div>
+    <h3 class="post-card__title">
+      <a href="/blog-laptrinhmang/posts/java-01-gioi-thieu-java/">
+        Hành trình trở thành Kỹ sư Java Backend
+      </a>
+    </h3>
+    <p class="post-card__excerpt">
+      Chia sẻ kinh nghiệm học Java, Spring Boot, Database và cách
+      xây dựng portfolio cho người mới.
+    </p>
+    <a class="post-card__more" href="/blog-laptrinhmang/posts/java-01-gioi-thieu-java/">
+      Xem thêm →
+    </a>
+  </article>
+
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <span>&copy; 2025 <a href="https://vupham-rainn.github.io/blog-laptrinhmang/">Blog Lập Trình Mạng</a></span> ·
     <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+      Powered by
+      <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+      <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
+  </footer>
 
-<script>
+  <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+      <path d="M12 6H0l6-6z" />
+    </svg>
+  </a>
+
+  <script>
     let menu = document.getElementById('menu');
     if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
+      const scrollPosition = localStorage.getItem("menu-scroll-position");
+      if (scrollPosition) {
+        menu.scrollLeft = parseInt(scrollPosition, 10);
+      }
+
+      menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        var id = this.getAttribute("href").substr(1);
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+            behavior: "smooth"
+          });
+        } else {
+          document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+        }
+        if (id === "top") {
+          history.replaceState(null, null, " ");
+        } else {
+          history.pushState(null, null, `#${id}`);
+        }
+      });
     });
-
-</script>
-<script>
+  </script>
+  <script>
     var mybutton = document.getElementById("top-link");
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        mybutton.style.visibility = "visible";
+        mybutton.style.opacity = "1";
+      } else {
+        mybutton.style.visibility = "hidden";
+        mybutton.style.opacity = "0";
+      }
     };
-
-</script>
-<script>
+  </script>
+  <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
+      const html = document.querySelector("html");
+      if (html.dataset.theme === "dark") {
+        html.dataset.theme = 'light';
+        localStorage.setItem("pref-theme", 'light');
+      } else {
+        html.dataset.theme = 'dark';
+        localStorage.setItem("pref-theme", 'dark');
+      }
     })
-
-</script>
+  </script>
 </body>
 
 </html>
